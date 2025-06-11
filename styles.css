@@ -64,7 +64,7 @@ body {
   padding: 2rem;
   position: relative;
   z-index: 1;
-  background: rgba(0, 82, 156, 0.2);
+  /* background: rgba(0, 82, 156, 0.2); */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -72,7 +72,7 @@ body {
   align-items: center;
   backdrop-filter: blur(10px);
   border-radius: 0;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); */
 }
 
 /* Header Styles */
@@ -158,9 +158,13 @@ main {
 }
 
 .animated-text {
-  height: 50px;
-  overflow: hidden;
+  height: 85px;
   margin-bottom: 2rem;
+  width: 100%;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .animated-text .text {
@@ -168,10 +172,18 @@ main {
   color: var(--white);
   font-size: 30px;
   font-weight: 600;
+  display: inline-block;
 }
 
 .animated-text .text.sec-text {
   color: var(--secondary-color);
+  display: inline-block;
+}
+
+#element {
+  color: var(--secondary-color);
+  display: flex;
+  font-weight: 600;
 }
 
 .animated-text .text.sec-text::before {
@@ -508,8 +520,12 @@ footer {
     font-size: 2.5rem;
   }
 
+  .animated-text {
+    height: 35px;
+  }
+
   .animated-text .text {
-    font-size: 24px;
+    font-size: 18px;
   }
 
   .countdown-container {
@@ -537,10 +553,19 @@ footer {
 }
 
 @media (max-width: 480px) {
+  .animated-text {
+    height: 30px;
+  }
+
+  .animated-text .text {
+    font-size: 16px;
+  }
+
   .countdown-item {
     min-width: 60px;
     padding: 0.8rem;
   }
+
   .social-media {
     gap: 1rem;
   }

@@ -37,7 +37,8 @@
           </h1>
           <div class="animated-text">
             <span class="text first-text">Our Website is</span>
-            <span class="text sec-text">Under Construction</span>
+            <!-- <span class="text sec-text">Under Construction</span> -->
+            <span id="element" class="text"></span>
           </div>
 
           <p class="description">
@@ -113,7 +114,18 @@
         </p>
       </footer>
     </div>
-
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="script.js"></script>
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Under Construction.", "Coming Soon.", "Getting Redesigned.","Being Upgraded.","Redesigning.","Upgrading.",],
+        typeSpeed: 90,
+        smartBackspace: false, // Default value
+        loop: true,
+        backSpeed: 60,
+        loopCount: Infinity,
+        showCursor: false,
+      });
+    </script>
   </body>
 </html>
