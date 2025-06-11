@@ -466,7 +466,8 @@ main {
   font-size: 1.2rem;
 }
 
-.contact-item span {
+.contact-item a {
+  text-decoration: none;
   color: var(--primary-color);
   font-weight: 500;
 }
