@@ -1,71 +1,7 @@
 // Text Animation
 document.addEventListener("DOMContentLoaded", function () {
-  const text = document.querySelector(".sec-text");
-  const animatedTextContainer = document.querySelector(".animated-text");
-
-  // Adjust text based on screen size
-  const adjustTextForScreenSize = () => {
-    // Get phrases based on screen width
-    let phrases;
-    if (window.innerWidth <= 480) {
-      // Very small screens - shorter phrases
-      phrases = [
-        "Under Construction",
-        "Coming Soon",
-        "Redesigning",
-        "Upgrading",
-      ];
-    } else {
-      // Normal screens - regular phrases
-      phrases = [
-        "Under Construction",
-        "Coming Soon",
-        "Getting Redesigned",
-        "Being Upgraded",
-      ];
-    }
-    return phrases;
-  };
-
-  // Array of text to display in the animation
-  const textLoad = () => {
-    const phrases = adjustTextForScreenSize();
-    let i = 0;
-
-    // Change text every 4 seconds
-    setInterval(() => {
-      text.textContent = phrases[i];
-      i = (i + 1) % phrases.length;
-    }, 4000);
-  };
-
-  // Update text on window resize
-  window.addEventListener("resize", () => {
-    const phrases = adjustTextForScreenSize();
-    // Update the current text if needed
-    if (text.textContent.length > 0) {
-      // Find a matching phrase or use the first one
-      const currentIndex = phrases.indexOf(text.textContent);
-      if (currentIndex === -1) {
-        text.textContent = phrases[0];
-      }
-    }
-
-    // Adjust animation container height
-    if (window.innerWidth <= 480) {
-      animatedTextContainer.style.height = "30px";
-    } else if (window.innerWidth <= 768) {
-      animatedTextContainer.style.height = "35px";
-    } else {
-      animatedTextContainer.style.height = "50px";
-    }
-  });
-
-  textLoad();
-
-  // Set the launch date (3 months from now)
-  const launchDate = new Date();
-  launchDate.setMonth(launchDate.getMonth() + 3);
+  // Set a fixed launch date (July 11, 2025 - 1 month from today)
+  const launchDate = new Date("2025-07-11T00:00:00");
 
   // Countdown Timer
   function updateCountdown() {
