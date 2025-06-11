@@ -84,45 +84,50 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Calculate mouse position as a percentage of the viewport
     const mouseX = e.clientX / window.innerWidth;
-    const mouseY = e.clientY / window.innerHeight;    // Apply transform to the illustration (subtle movement)
+    const mouseY = e.clientY / window.innerHeight; // Apply transform to the illustration (subtle movement)
     illustration.style.transform = `translate(${mouseX * 20 - 10}px, ${
       mouseY * 20 - 10
     }px)`;
   });
-  
+
   // Create bubbles animation
   const createBubbles = () => {
-    const bubbleContainer = document.getElementById('bubbleContainer');
-    const colors = ['rgba(255, 255, 255, 0.1)', 'rgba(243, 111, 33, 0.1)', 'rgba(0, 82, 156, 0.2)'];
-    
+    const bubbleContainer = document.getElementById("bubbleContainer");
+    const colors = [
+      "rgba(255, 255, 255, 0.1)",
+      "rgba(243, 111, 33, 0.1)",
+      "rgba(0, 82, 156, 0.2)",
+    ];
+
     // Create 30 bubbles
     for (let i = 0; i < 30; i++) {
-      const bubble = document.createElement('div');
-      bubble.classList.add('bubble');
-      
+      const bubble = document.createElement("div");
+      bubble.classList.add("bubble");
+
       // Random size between 20px and 80px
       const size = Math.random() * 60 + 20;
       bubble.style.width = `${size}px`;
       bubble.style.height = `${size}px`;
-      
+
       // Random horizontal position
       bubble.style.left = `${Math.random() * 100}%`;
-      
+
       // Random animation duration between 10s and 25s
       const duration = Math.random() * 15 + 10;
-      bubble.style.setProperty('--duration', `${duration}s`);
-      
+      bubble.style.setProperty("--duration", `${duration}s`);
+
       // Random delay before animation starts
       bubble.style.animationDelay = `${Math.random() * 15}s`;
-      
+
       // Random color from our colors array
-      bubble.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-      
+      bubble.style.backgroundColor =
+        colors[Math.floor(Math.random() * colors.length)];
+
       // Add bubble to container
       bubbleContainer.appendChild(bubble);
     }
   };
-  
+
   // Initialize bubbles
   createBubbles();
 });
