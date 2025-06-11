@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  color: var(--primary-color);
 }
 
 :root {
@@ -17,8 +18,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, var(--primary-color), var(--dark-blue));
-  color: var(--white);
+  /* background: linear-gradient(135deg, var(--primary-color), var(--dark-blue)); */
   overflow-x: hidden;
   position: relative;
   min-height: 100vh;
@@ -103,7 +103,6 @@ header {
 .logo-text {
   font-size: 1.2rem;
   font-weight: 600;
-  color: var(--white);
 }
 
 /* Main Content Styles */
@@ -169,7 +168,6 @@ main {
 
 .animated-text .text {
   position: relative;
-  color: var(--white);
   font-size: 30px;
   font-weight: 600;
   display: inline-block;
@@ -238,12 +236,11 @@ main {
 .countdown-item span:first-child {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--white);
 }
 
 .countdown-label {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--secondary-color);
 }
 
 /* Notify Form Styles */
@@ -256,7 +253,6 @@ main {
 .notify-container h3 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  color: var(--white);
 }
 
 .notify-form {
@@ -268,7 +264,7 @@ main {
 .notify-form input {
   flex: 1;
   padding: 1rem;
-  border: none;
+  border: 2px solid var(--secondary-color);
   border-radius: 8px 0 0 8px;
   outline: none;
   font-size: 1rem;
@@ -276,13 +272,13 @@ main {
 
 .notify-btn {
   background-color: var(--secondary-color);
-  color: var(--white);
   border: none;
   border-radius: 0 8px 8px 0;
   padding: 0 1.5rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  color: var(--white);
 }
 
 .notify-btn:hover {
@@ -431,7 +427,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--white);
   text-decoration: none;
   transition: all 0.3s ease;
   backdrop-filter: blur(5px);
