@@ -27,17 +27,40 @@ document.addEventListener("DOMContentLoaded", function () {
   // Update countdown every second
   setInterval(updateCountdown, 1000);
   updateCountdown();
-
   // Notification form submission
   const notifyForm = document.querySelector(".notify-form");
+  const customNotification = document.getElementById("custom-notification");
+  const notificationMessage = document.getElementById("notification-message");
+  const notificationClose = document.getElementById("notification-close");
+
+  // Function to show notification
+  function showNotification(message) {
+    notificationMessage.textContent = message;
+    customNotification.classList.remove("notification-hidden");
+    customNotification.classList.add("notification-visible");
+
+    // Auto-hide notification after 5 seconds
+    setTimeout(() => {
+      hideNotification();
+    }, 5000);
+  }
+
+  // Function to hide notification
+  function hideNotification() {
+    customNotification.classList.remove("notification-visible");
+    customNotification.classList.add("notification-hidden");
+  }
+
+  // Close button event
+  notificationClose.addEventListener("click", hideNotification);
 
   notifyForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
     const email = this.querySelector('input[type="email"]').value;
 
-    // Display alert for demo purposes (in a real implementation, you would send this to a server)
-    alert(`Thank you! We'll notify ${email} when the site launches.`);
+    // Show custom notification
+    showNotification(`We'll notify ${email} when the site launches.`);
 
     // Clear the form
     this.reset();
