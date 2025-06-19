@@ -603,6 +603,10 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+  .logo-container {
+    height: 160px;
+  }
+
   .title {
     font-size: 2.5rem;
   }
@@ -645,6 +649,9 @@ footer {
 }
 
 @media (max-width: 480px) {
+  .logo-container {
+    height: 150px;
+  }
   .animated-text {
     height: 30px;
   }
