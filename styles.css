@@ -87,6 +87,13 @@ header {
 .logo-container {
   display: flex;
   justify-content: center;
+  height: 180px;
+}
+
+.logo-container img{
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .logo-placeholder {
