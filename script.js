@@ -1,7 +1,7 @@
 // Text Animation
 document.addEventListener("DOMContentLoaded", function () {
   // Set a fixed launch date (July 11, 2025 - 1 month from today)
-  const launchDate = new Date("2025-08-22T00:00:00");
+  const launchDate = new Date("2025-08-25T00:00:00");
 
   // Countdown Timer
   function updateCountdown() {
